@@ -11,7 +11,7 @@ class Train():
     def train(self, epoch, lr):
         std = 1
         optimizer = optim.Adam(self.net.parameters(), lr=lr)
-        schedule = torch.optim.lr_scheduler.StepLR(optimizer=optimizer, step_size=5000, gamma=0.5)
+        schedule = torch.optim.lr_scheduler.StepLR(optimizer=optimizer, step_size=10000, gamma=0.5)
         avg_loss = 0
         for e in range(epoch):
             optimizer.zero_grad()
